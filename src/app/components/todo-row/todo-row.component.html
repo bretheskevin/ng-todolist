@@ -1,0 +1,5 @@
+<div class="d-flex mb-2">
+  <h1 class="mr-2 my-auto" [ngClass]="shouldBeGreen() ? 'text-green' : ''">{{todo.content}}</h1>
+  <div class="btn rounded-2 red dark-4 mr-2" (click)="deleteTodo()">Supprimer</div>
+  <div class="btn rounded-2 green dark-4" (click)="switchComplete()">{{stateToString()}}</div>
+</div>
