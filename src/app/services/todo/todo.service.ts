@@ -47,4 +47,9 @@ export class TodoService {
     });
     this.todos$.next(this._todos);
   }
+
+  deleteCompleted() {
+    this._todos = this._todos.filter((todo: TodoModel) => todo.state === TodoState.Active);
+    this.todos$.next(this._todos);
+  }
 }

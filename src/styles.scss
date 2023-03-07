@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+
+body {
+  background: linear-gradient(#2C395C, #230F2B, black) fixed;
+  min-height: 100vh;
+}
+
+.btn-color {
+  background: #4e5f9f;
+}
+
+.max-width {
+  max-width: 600px;
+}

@@ -1,7 +1,11 @@
-<div class="form-material">
-  <div class="form-field">
-    <input [(ngModel)]="content" type="text" id="name" class="form-control" />
-    <label for="name">Content</label>
+<div class="mb-3">
+  <div class="d-flex fx-col form-field max-width">
+    <div class="w100">
+      <label for="name">Content</label>
+      <input [(ngModel)]="content" type="text" id="name" class="form-control rounded-2 white"/>
+    </div>
   </div>
-  <div class="btn rounded-2 green dark-4" (click)="addTodo(content)">Ajouter</div>
+
+  <div class="btn rounded-2 btn-color mr-3" (click)="addTodo(content)">Add</div>
+  <div class="btn rounded-2 red dark-4" (click)="deleteCompleted()">Delete completed</div>
 </div>

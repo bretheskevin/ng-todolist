@@ -1,3 +1,5 @@
-<div *ngFor="let todo of todos">
+<div *ngFor="let todo of todos; let i = index">
   <app-todo-row [todo]="todo"></app-todo-row>
+
+  <div *ngIf="i !== todos.length -1" class="divider white my-2"></div>
 </div>

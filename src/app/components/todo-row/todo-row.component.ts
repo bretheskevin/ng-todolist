@@ -20,8 +20,15 @@ export class TodoRowComponent {
     this._servTodo.completeTodoById(this.todo.id);
   }
 
-  shouldBeGreen() {
-    return this.todo.state === TodoState.Completed
+  stateColorButton() {
+    switch (this.todo.state) {
+      case TodoState.Active:
+        return "orange";
+      case TodoState.Completed:
+        return "green";
+      default:
+        return "";
+    }
   }
 
   switchComplete() {
@@ -35,7 +42,7 @@ export class TodoRowComponent {
   stateToString() {
     switch (this.todo.state) {
       case TodoState.Active:
-        return "Active";
+        return "To do";
       case TodoState.Completed:
         return "Completed";
       default:
