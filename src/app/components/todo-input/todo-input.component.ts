@@ -16,7 +16,7 @@ export class TodoInputComponent {
 
   addTodo(content: string): void {
     if (content === "") {
-        this.toastr.error("Please enter a todo");
+      this.toastr.error("Please enter a todo");
       return;
     }
 
